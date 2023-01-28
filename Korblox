@@ -1,0 +1,22 @@
+--// Dont edit anything under here, it will mess up the code!
+
+
+if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+    if getgenv().LegToRemove == "Right" then
+        game:GetService("Players").LocalPlayer.Character.RightUpperLeg:Destroy()
+    elseif getgenv().LegToRemove == "Left" then
+        game:GetService("Players").LocalPlayer.Character.LeftUpperLeg:Destroy()
+    elseif getgenv().LegToRemove == "Both" then
+        game:GetService("Players").LocalPlayer.Character.RightUpperLeg:Destroy()
+        game:GetService("Players").LocalPlayer.Character.LeftUpperLeg:Destroy()
+    end
+else
+    if getgenv().LegToRemove == "Right" then
+        game:GetService("Players").Character["Right Leg"]:Destroy()
+    elseif getgenv().LegToRemove == "Left" then
+        game:GetService("Players").Character["Left Leg"]:Destroy()
+    elseif getgenv().LegToRemove == "Both" then
+        game:GetService("Players").Character["Right Leg"]:Destroy()
+        game:GetService("Players").Character["Left Leg"]:Destroy()
+    end
+end
